@@ -1,6 +1,5 @@
 // importación
 import React from "react";
-import Button from "./components/Button";
 import Functions from "./components/Functions";
 import MathOperations from "./components/MathOperation";
 import Numbers from "./components/Numbers";
@@ -9,15 +8,14 @@ import './App.css';
 
 // Función Flecha o Arrow Function
 const  App = () => {
-    const clickHandlerFunction = text => {
-        console.log("Button.clickHandler", text)
-    }
     console.log("Renderización de la App")
     // Lo que ejecuta la función
     return (
     <main className='react-calculator'>
         <Result value="0"/>
-        <Numbers onClickHandler={clickHandlerFunction}/>
+        <Numbers onClickNumber={(number) => {
+            console.log("Click en el número", number)
+        } }/>
         <Functions 
             onContentClear={() => console.log("Content clear")} 
             onDelete={() => console.log("onDelete")} 
