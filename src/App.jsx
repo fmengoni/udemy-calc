@@ -17,7 +17,7 @@ const  App = () => {
     return (
     <main className='react-calculator'>
         <Result value="0"/>
-        <Numbers onClickEqual={clickHandlerFunction}/>
+        <Numbers onClickHandler={clickHandlerFunction}/>
         <Functions 
             onContentClear={() => console.log("Content clear")} 
             onDelete={() => console.log("onDelete")} 
